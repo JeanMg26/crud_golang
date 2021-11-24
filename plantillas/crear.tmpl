@@ -1,0 +1,36 @@
+{{ define "crear" }}
+
+{{ template "cabecera" }}
+
+<div class="container mt-5">
+   <div class="row">
+      <div class="col-10">
+         <div class="card">
+            <div class="card-header"><strong>Agregar Empleados</strong></div>
+            <div class="card-body">
+               <form method="post" action="/insertar">
+                  <div class="row">
+                     <div class="col-12 mb-3">
+                        <label class="form-label">Nombre:</label>
+                        <input type="text" name="nombre" class="form-control" placeholder="Ingresar Nombre">
+                     </div>
+                     <div class="col-12  mb-3">
+                        <label class="form-label">Email:</label>
+                        <input type="email" name="correo" class="form-control" placeholder="Ingresar Correo">
+                     </div>
+                     <div class="col-12 mb-3 text-center">
+                        <button class="btn btn-primary" type="submit">Guardar</button>
+                        <a class="btn btn-danger" type="button" href="/inicio">Cancelar</a>
+                     </div>
+                  </div>
+
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+{{ template "pie" }}
+
+{{ end }}
